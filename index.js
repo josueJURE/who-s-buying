@@ -3,8 +3,10 @@ var personPaying = ""
 const btn = document.getElementById("btn");
 const people = ["pierre", "paul", "jacques", "henry" ];
 const date = new Date().getDay();
-const dayOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-var today = dayOfTheWeek[date];
+const daysOfWeek = Array.from({length: 7}, (item, i) => {
+  return new Date(0,0,i).toLocaleDateString("en-US", {weekday: "long"})
+})
+var today = daysOfWeek[date];
 
 btn.addEventListener("click", function() {
   if (date >= 0 && date < 2) {
