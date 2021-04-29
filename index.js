@@ -1,4 +1,5 @@
 const name = document.getElementById("name");
+const image = document.getElementById("image");
 var personPaying = ""
 const btn = document.getElementById("btn");
 const people = ["pierre", "paul", "jacques", "henry" ];
@@ -9,13 +10,13 @@ const daysOfWeek = Array.from({length: 7}, (item, i) => {
 var today = daysOfWeek[date];
 
 var names = {
-  "Monday": "Pierre",
-  "Tuesday": "Pierre",
-  "Wednesday": "Paul",
-  "Thursday": "Paul",
-  "Friday": "Jacques",
-  "Saturday": "Jacques",
-  "Sunday": "Henry",
+  "Monday": "emilie",
+  "Tuesday": "emilie",
+  "Wednesday": "jessica",
+  "Thursday": "jessica",
+  "Friday": "paul",
+  "Saturday": "paul",
+  "Sunday": "pierre",
 }
 
 console.log(names[today])
@@ -25,5 +26,7 @@ btn.addEventListener("click", function() {
   : date >= 2 && date < 4 ? personPaying = `today is ${today} ${names[today]} is paying`
   : date >= 4 && date < 6 ?   personPaying = `Hi ${names[today]}, today is ${today} so although we are in Amsterdam we're not going ducth`
   : personPaying = `Hi ${names[today]}, today is ${today}, your turn to pay today`
-  name.textContent = personPaying
+  name.textContent = personPaying;
+  image.src = `picture/${names[today]}.png`
+
 }, false)
