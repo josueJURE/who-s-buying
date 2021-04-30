@@ -28,5 +28,7 @@ btn.addEventListener("click", function() {
   : personPaying = `Hi ${names[today]}, today is ${today}, your turn to pay today`
   name.textContent = personPaying;
   image.src = `picture/${names[today]}.png`
+  image.alt = "picture of an avatar"
+  document.getElementById("icon").style.display = "block";
 
 }, false)

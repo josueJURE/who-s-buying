@@ -16,7 +16,8 @@
 
 button {
   box-shadow: 5px 10px;
-  font-family: "Copperplate", "Papyrus", "fantasy";
+  font-family: 'Krona One', "sans-serif";
+  /* font-family: "Copperplate", "Papyrus", "fantasy"; */
   font-size: 30px;
   font-weight: light;
   margin: 100px 200px 75px 100px;
@@ -36,4 +37,12 @@ background-repeat: no-repeat;
 background-position: right top;
 background-attachment: fixed;
 background-size: auto;
+}
+
+.unseen {display: none;
+}
+
+img {
+  box-shadow: 5px 10px;
+  width: 30%
 }
