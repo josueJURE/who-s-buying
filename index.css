@@ -39,7 +39,7 @@ background-attachment: fixed;
 background-size: auto;
 }
 
-.unseen {display: none;
+i.unseen {display: none;
 }
 
 img {
