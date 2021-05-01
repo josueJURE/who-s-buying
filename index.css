@@ -39,7 +39,10 @@ background-attachment: fixed;
 background-size: auto;
 }
 
-i.unseen {display: none;
+i.unseen {
+  display: none;
+  max-width: 100px;
+  margin-top: 15px;
 }
 
 img {

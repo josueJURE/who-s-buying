@@ -29,6 +29,12 @@ btn.addEventListener("click", function() {
   name.textContent = personPaying;
   image.src = `picture/${names[today]}.png`
   image.alt = "picture of an avatar"
-  document.getElementById("icon").style.display = "block";
-
+  var unseen = document.getElementsByClassName("unseen");
+  myFunction(unseen);
 }, false)
+
+function myFunction(n) {
+  for(var i = 0; i < n.length; i++) {
+    n[i].style.display = "block";
+  }
+}
