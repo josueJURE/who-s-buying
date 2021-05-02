@@ -27,14 +27,10 @@ btn.addEventListener("click", function() {
   : date >= 4 && date < 6 ?   personPaying = `Hi ${names[today]}, today is ${today} so although we are in Amsterdam we're not going ducth`
   : personPaying = `Hi ${names[today]}, today is ${today}, your turn to pay today`
   name.textContent = personPaying;
-  image.src = `picture/${names[today]}.png`
-  image.alt = "picture of an avatar"
+  image.src = `picture/${names[today]}.png`;
+  image.alt = "picture of an avatar";
   var unseen = document.getElementsByClassName("unseen");
-  myFunction(unseen);
-}, false)
-
-function myFunction(n) {
-  for(var i = 0; i < n.length; i++) {
-    n[i].style.display = "block";
+  for (var i = 0; i < unseen.length; i++) {
+    unseen[i].style.display = "inline";
   }
-}
+}, false);
