@@ -8,7 +8,6 @@ const daysOfWeek = Array.from({length: 7}, (item, i) => {
   return new Date(0,0,i).toLocaleDateString("en-US", {weekday: "long"})
 })
 var today = daysOfWeek[date];
-
 var names = {
   "Monday": "emilie",
   "Tuesday": "emilie",
@@ -18,9 +17,6 @@ var names = {
   "Saturday": "paul",
   "Sunday": "pierre",
 }
-
-console.log(names[today])
-
 btn.addEventListener("click", function() {
   date >= 0 && date < 2 ? personPaying = `today is ${today} so ${names[today]} is footing the bill`
   : date >= 2 && date < 4 ? personPaying = `today is ${today} ${names[today]} is paying`
@@ -30,7 +26,6 @@ btn.addEventListener("click", function() {
   image.src = `picture/${names[today]}.png`;
   image.alt = "picture of an avatar";
   var unseen = document.getElementsByClassName("unseen");
-  for (var i = 0; i < unseen.length; i++) {
-    unseen[i].style.display = "inline";
-  }
+  var unseenArray = [...unseen]
+  unseenArray.map(x => x.style.display = "inline");
 }, false);
